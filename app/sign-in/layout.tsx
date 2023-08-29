@@ -1,4 +1,10 @@
 import Form from "@/components/form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CampusBuddy- Sign in",
+  description: "Sign into CampusBuddy to start exploring student services",
+};
 
 const SignInLayout = ({ children }: { children: React.ReactNode }) => {
   return (

@@ -1,16 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Metadata } from "next";
 
 import Field from "@/components/field";
 import Button from "@/components/button";
 import CircularButton from "@/components/circular-button";
-
-export const metadata: Metadata = {
-  title: "CampusBuddy- Sign in",
-  description: "Sign into CampusBuddy to start exploring student services",
-};
 
 const SignInPage = () => {
   const ForgotPasswordLink = (
