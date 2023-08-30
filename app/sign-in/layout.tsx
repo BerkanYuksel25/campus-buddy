@@ -1,8 +1,8 @@
-import Form from "@/components/form";
+import Form from "@/app/components/form";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CampusBuddy- Sign in",
+  title: "CampusBuddy - Sign in",
   description: "Sign into CampusBuddy to start exploring student services",
 };
 

@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 
-import Field from "@/components/field";
-import Button from "@/components/button";
-import CircularButton from "@/components/circular-button";
+import Field from "@/app/components/field";
+import Button from "@/app/components/button";
+import CircularButton from "@/app/components/circular-button";
 
 const SignInPage = () => {
   const ForgotPasswordLink = (

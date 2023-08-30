@@ -13,8 +13,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <head>
         <link rel="icon" href="/favicon.png" />
       </head>
-      <body className="bg-gradient-to-b from-indigo-500 to-neutral-800 h-screen flex flex-col justify-center p-9 box-border text-white">
-        {children}
+      <body>
+        <main className="flex flex-col bg-gradient-to-b from-indigo-500 to-neutral-800 justify-center p-9 box-border text-white">
+          {children}
+        </main>
       </body>
     </html>
   );
