@@ -1,69 +1,29 @@
-"use client";
+import { Metadata } from "next";
+import {
+  EmailField,
+  ForgotPasswordLink,
+  PasswordField,
+  SignUpLink,
+  Title,
+} from "./components/server";
+import { SignInButton, SocialSignOnButtons } from "./components/client";
+import { Form } from "../components/server";
 
-import Link from "next/link";
-
-import Field from "@/app/components/field";
-import Button from "@/app/components/button";
-import CircularButton from "@/app/components/circular-button";
-
-const SignInPage = () => {
-  const ForgotPasswordLink = (
-    <Link
-      href="/"
-      className="self-end uppercase text-neutral-300 text-xs font-normal hover:border-b-blue-500"
-    >
-      Forgot password?
-    </Link>
-  );
-
-  const SocialSignOnButtons = (
-    <div className="flex flex-col items-center uppercase font-semibold gap-4">
-      Or
-      <div className="flex gap-10">
-        <CircularButton
-          imgSrc="/g-icon.svg"
-          altText="Sign in with Google"
-          onClick={() => console.log("Google clicked")}
-          width={100}
-          height={100}
-        />
-        <CircularButton
-          imgSrc="/x-icon.svg"
-          altText="Sign in with X"
-          onClick={() => console.log("X clicked")}
-          width={100}
-          height={100}
-        />
-        <CircularButton
-          imgSrc="/fb-icon.svg"
-          altText="Sign in with Facebook"
-          onClick={() => console.log("Facebook clicked")}
-          width={100}
-          height={100}
-        />
-      </div>
-    </div>
-  );
-
-  const SignUpLink = (
-    <div className="self-center uppercase text-xs font-semibold">
-      Don&apos;t have an account?
-      <Link href="/" className="text-blue-500 pl-1">
-        Sign up
-      </Link>
-    </div>
-  );
-
-  return (
-    <>
-      <Field type="email" label="Email address" />
-      <Field type="password" label="Password" />
-      {ForgotPasswordLink}
-      <Button type="submit">Sign in</Button>
-      {SocialSignOnButtons}
-      {SignUpLink}
-    </>
-  );
+export const metadata: Metadata = {
+  title: "CampusBuddy - Sign in",
+  description: "Sign into CampusBuddy to start exploring student services",
 };
+
+const SignInPage = () => (
+  <Form>
+    <Title />
+    <EmailField />
+    <PasswordField />
+    <ForgotPasswordLink />
+    <SignInButton />
+    <SocialSignOnButtons />
+    <SignUpLink />
+  </Form>
+);
 
 export default SignInPage;

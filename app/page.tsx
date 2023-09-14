@@ -1,9 +1,5 @@
-const Home = () => {
-  return (
-    <h1 className="animate-bounce text-white text-4xl text font-bold self-center drop-shadow-lg">
-      CampusBuddy
-    </h1>
-  );
-};
+import { CampusBuddySplash } from "./components/server";
+
+const Home = () => <CampusBuddySplash />;
 
 export default Home;
