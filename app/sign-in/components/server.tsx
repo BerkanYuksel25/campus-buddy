@@ -1,15 +1,11 @@
-import { Field } from "@/app/components/server";
+import { Field, Title } from "@/app/components/server";
 import Link from "next/link";
 
-export const Title = () => (
-  <h1 className="text-white text-4xl text drop-shadow-lg font-bold pb-10">
-    Sign in
-  </h1>
-);
+export const SignInTitle = () => <Title>Sign in</Title>;
 
-export const EmailField = () => <Field type="email" label="Email address" />;
+export const EmailField = () => <Field type="email">Email address</Field>;
 
-export const PasswordField = () => <Field type="password" label="Password" />;
+export const PasswordField = () => <Field type="password">Password</Field>;
 
 export const ForgotPasswordLink = () => (
   <Link
@@ -23,7 +19,7 @@ export const ForgotPasswordLink = () => (
 export const SignUpLink = () => (
   <div className="self-center uppercase text-xs font-semibold">
     Don&apos;t have an account?
-    <Link href="/" className="text-blue-500 pl-1">
+    <Link href="/sign-up" className="text-blue-500 pl-1">
       Sign up
     </Link>
   </div>

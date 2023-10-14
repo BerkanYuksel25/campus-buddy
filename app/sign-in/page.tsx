@@ -3,8 +3,8 @@ import {
   EmailField,
   ForgotPasswordLink,
   PasswordField,
+  SignInTitle,
   SignUpLink,
-  Title,
 } from "./components/server";
 import { SignInButton, SocialSignOnButtons } from "./components/client";
 import { Form } from "../components/server";
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const SignInPage = () => (
   <Form>
-    <Title />
+    <SignInTitle />
     <EmailField />
     <PasswordField />
     <ForgotPasswordLink />

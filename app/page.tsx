@@ -1,5 +1,5 @@
 import { CampusBuddySplash } from "./components/server";
 
-const Home = () => <CampusBuddySplash />;
+const HomePage = () => <CampusBuddySplash />;
 
-export default Home;
+export default HomePage;
