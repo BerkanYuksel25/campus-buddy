@@ -1,12 +1,6 @@
 import { HTMLInputTypeAttribute } from "react";
 import { ReactNode } from "react";
 
-export const CampusBuddySplash = () => (
-  <h1 className="animate-bounce text-white text-4xl text font-bold self-center drop-shadow-lg">
-    CampusBuddy
-  </h1>
-);
-
 export const Title = ({ children }: { children: string }) => (
   <h1 className="text-white text-4xl text drop-shadow-lg font-bold pb-10">{children}</h1>
 );

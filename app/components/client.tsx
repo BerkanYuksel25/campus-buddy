@@ -4,10 +4,25 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { ButtonHTMLAttributes } from "react";
 
+export const CampusBuddySplash = () => {
+  const router = useRouter();
+
+  return (
+    <>
+      <h1 className="animate-bounce text-white text-4xl text font-bold self-center drop-shadow-lg">
+        CampusBuddy
+      </h1>
+      <Button type="button" onClick={() => router.push("/sign-in")}>
+        Get started
+      </Button>
+    </>
+  );
+};
+
 export const BackButton = () => {
   const router = useRouter();
   const pathname = usePathname();
-  const invalidRoutes = ["/", "/sign-in"];
+  const invalidRoutes = ["/"];
 
   if (invalidRoutes.some((route) => route === pathname)) {
     return null;

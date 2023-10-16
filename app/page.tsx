@@ -1,4 +1,4 @@
-import { CampusBuddySplash } from "./components/server";
+import { CampusBuddySplash } from "./components/client";
 
 const HomePage = () => <CampusBuddySplash />;
 
