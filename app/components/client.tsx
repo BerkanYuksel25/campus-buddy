@@ -8,14 +8,14 @@ export const CampusBuddySplash = () => {
   const router = useRouter();
 
   return (
-    <>
+    <div className="h-full flex flex-col justify-center">
       <h1 className="animate-bounce text-white text-4xl text font-bold self-center drop-shadow-lg">
         CampusBuddy
       </h1>
       <Button type="button" onClick={() => router.push("/sign-in")}>
         Get started
       </Button>
-    </>
+    </div>
   );
 };
 
@@ -29,9 +29,11 @@ export const BackButton = () => {
   }
 
   return (
-    <button onClick={() => router.back()}>
-      <Image src="/back-button.svg" alt="Go back" width={25} height={25} />
-    </button>
+    <div className="pb-8">
+      <button onClick={() => router.back()}>
+        <Image src="/back-button.svg" alt="Go back" width={25} height={25} />
+      </button>
+    </div>
   );
 };
 
@@ -73,7 +75,7 @@ export const Button = ({
       id={children}
       type={type}
       onClick={onClick}
-      className="my-8 uppercase text-lg font-semibold leading-5 bg-blue-500 py-5 rounded-full border-zinc-600 hover:bg-blue-400 active:bg-blue-500"
+      className="my-4 uppercase text-lg font-semibold leading-5 bg-blue-500 py-5 rounded-full border-zinc-600 hover:bg-blue-400 active:bg-blue-500"
     >
       {children}
     </button>

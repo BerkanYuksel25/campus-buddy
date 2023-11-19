@@ -2,16 +2,26 @@ import { HTMLInputTypeAttribute } from "react";
 import { ReactNode } from "react";
 
 export const Title = ({ children }: { children: string }) => (
-  <h1 className="text-white text-4xl text drop-shadow-lg font-bold pb-10">{children}</h1>
+  <h1 className="text-white text-4xl text drop-shadow-lg font-bold pb-8">
+    {children}
+  </h1>
 );
 
 export const Form = ({ children }: { children: ReactNode }) => {
   return (
-    <form className="flex flex-col text-white leading-normal tracking-wider gap-4">{children}</form>
+    <form className="flex flex-col text-white leading-normal tracking-wider gap-4">
+      {children}
+    </form>
   );
 };
 
-export const Field = ({ type, children }: { type: HTMLInputTypeAttribute; children: string }) => {
+export const Field = ({
+  type,
+  children,
+}: {
+  type: HTMLInputTypeAttribute;
+  children: string;
+}) => {
   return (
     <>
       <label htmlFor={children} className="font-bold">

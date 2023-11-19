@@ -15,11 +15,9 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
       <head>
         <link rel="icon" href="/favicon.png" />
       </head>
-      <body>
-        <main className="bg-gradient-to-b from-indigo-500 to-neutral-800 p-9 box-border text-white">
-          <BackButton />
-          <div className="h-full flex flex-col justify-center">{children}</div>
-        </main>
+      <body className="flex flex-col bg-gradient-to-b from-indigo-500 to-neutral-800 p-8 box-border text-white">
+        <BackButton />
+        <main className="overflow-auto">{children}</main>
       </body>
     </html>
   );
