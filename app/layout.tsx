@@ -1,7 +1,7 @@
+import { Metadata } from "next";
 import { ReactNode } from "react";
-import { BackButton } from "./components/client";
+import { BackButton } from "./components/client/back-button";
 import "./globals.css";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "CampusBuddy",

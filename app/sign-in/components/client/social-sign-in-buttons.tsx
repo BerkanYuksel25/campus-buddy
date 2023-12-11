@@ -1,10 +1,8 @@
 "use client";
 
-import { Button, CircularButton } from "@/app/components/client";
+import { CircularButton } from "@/app/components/client/circular-button";
 
-export const SignInButton = () => <Button type="submit">Sign in</Button>;
-
-export const SocialSignOnButtons = () => (
+export const SocialSignInButtons = () => (
   <div className="flex flex-col items-center uppercase font-semibold gap-4">
     Or
     <div className="flex gap-10">
